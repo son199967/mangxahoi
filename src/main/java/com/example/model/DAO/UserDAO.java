@@ -30,7 +30,7 @@ public class UserDAO extends AbstractDAO implements IUserDAO {
 	private static final String INSERT_INTO_FRIENDS_STATEMENT = "INSERT INTO Friends VALUES ( ?, ?)";
 	private static final String SELECT_USER_BY_ID_STATEMENT = "SELECT * FROM Users WHERE user_id= ?";
 	private static final String DELETE_USER_STATEMENT = "DELETE FROM Users WHERE user_id= ?";
-	private static final String ADD_USER_STATEMENT = "INSERT INTO Users VALUES (null, ? , ? , ?, md5(?),?)";
+	private static final String ADD_USER_STATEMENT = "INSERT INTO Users VALUES (0, ? , ? , ?, md5(?),?)";
 
 	public int addUser(User user) throws UserExeption {
 		if (user != null) {
